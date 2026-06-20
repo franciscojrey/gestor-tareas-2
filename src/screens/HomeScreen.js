@@ -25,6 +25,7 @@ export default function HomeScreen({ navigation }) {
           <TareaItem
             tarea={item}
             onToggle={() => alternarCompletada(item.id)}
+            onAbrir={() => navigation.navigate('DetalleTarea', { tareaId: item.id })}
             onEliminar={() => eliminarTarea(item.id)}
           />
         )}
